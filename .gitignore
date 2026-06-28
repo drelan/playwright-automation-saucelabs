@@ -30,6 +30,9 @@ Thumbs.db
 *.swp
 *.swo
 
+# Claude Code (personal/local overrides — keep .claude/settings.json tracked)
+.claude/settings.local.json
+
 
 # Logs
 *.log
