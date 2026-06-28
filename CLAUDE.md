@@ -28,6 +28,10 @@ Path aliases are configured in `tsconfig.json` — always import across folders 
 3. Run `npx playwright test --list` after adding tests to confirm they're discovered (Playwright has no `--dry-run` flag)
 4. Run `npx tsc --noEmit` to confirm no TypeScript errors
 
+## Code review
+- After implementing changes, run `/code-review` (the `code-review` plugin is already enabled in `.claude/settings.json`) on the diff and act on the findings — fix bugs, simplify, update as needed — before considering the task done.
+- Don't open or comment on a GitHub PR for this — review the local working-tree diff only.
+
 ## Architecture rules
 - Locators go in `src/locators/*.ts`, one file per page. Standard pattern (see `LoginLocators.ts`): a class taking `Page` in the constructor, with getters returning locators in Playwright's recommended priority order: `getByRole()` > `getByLabel()` > `getByPlaceholder()` > `getByText()` > `getByTestId()` (data-test fallback).
   - `playwright.config.ts` sets `testIdAttribute: 'data-test'`, so `getByTestId()` targets SauceDemo's `data-test` attributes directly — no need to hand-roll `[data-test="..."]` selectors except for decorative/CSS-only elements.
