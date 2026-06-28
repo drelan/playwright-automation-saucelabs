@@ -8,15 +8,14 @@
     "skipLibCheck": true,
     "outDir": "./dist",
     "rootDir": "./",
-    "baseUrl": ".",
     "paths": {
-      "@pages/*": ["src/pages/*"],
-      "@locators/*": ["src/locators/*"],
-      "@utils/*": ["src/utils/*"],
-      "@fixtures/*": ["src/fixtures/*"],
-      "@models/*": ["src/models/*"],
-      "@constants/*": ["src/constants/*"],
-      "@config/*": ["config/*"]
+      "@pages/*": ["./src/pages/*"],
+      "@locators/*": ["./src/locators/*"],
+      "@utils/*": ["./src/utils/*"],
+      "@fixtures/*": ["./src/fixtures/*"],
+      "@models/*": ["./src/models/*"],
+      "@constants/*": ["./src/constants/*"],
+      "@config/*": ["./config/*"]
     },
     "resolveJsonModule": true,
     "forceConsistentCasingInFileNames": true
